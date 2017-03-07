@@ -1,8 +1,6 @@
 package co.paan.application;
 
-import co.paan.configuration.ElasticsearchConfiguration;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -11,7 +9,7 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 @ComponentScan(basePackages = "co.paan")
-@EnableAutoConfiguration(exclude = {ElasticsearchConfiguration.class})
+//@EnableAutoConfiguration(exclude = {ElasticsearchConfiguration.class})
 public class Application {
     public static void main(String args[]){
         SpringApplication.run(Application.class);

@@ -9,10 +9,33 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.11'
-    compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch:1.2.0.RELEASE'
-    compile 'org.springframework.data:spring-data-cassandra:1.1.1.RELEASE'
-    compile 'org.springframework:spring-test:4.1.2.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-logging:1.2.0.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-web:1.2.0.RELEASE'
-    compile 'org.springframework.boot:spring-boot-starter-actuator:1.2.0.RELEASE'
+    compile 'org.springframework.boot:spring-boot-starter-data-elasticsearch:1.5.2.RELEASE'
+    // https://mvnrepository.com/artifact/org.elasticsearch.client/transport
+    compile group: 'org.elasticsearch.client', name: 'transport', version: '5.2.2'
+    // https://mvnrepository.com/artifact/org.springframework.data/spring-data-cassandra
+    compile group: 'org.springframework.data', name: 'spring-data-cassandra', version: '1.5.1.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.springframework/spring-test
+    compile group: 'org.springframework', name: 'spring-test', version: '4.3.7.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-logging
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-logging', version: '1.5.2.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-web
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '1.5.2.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-actuator
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-actuator', version: '1.5.2.RELEASE'
+
+    // https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-test
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.5.2.RELEASE'
+    // https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch
+    // https://mvnrepository.com/artifact/org.elasticsearch/elasticsearch
+    compile group: 'org.elasticsearch', name: 'elasticsearch', version: '5.2.2'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.8'
+
+
+
 }

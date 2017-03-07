@@ -1,6 +1,7 @@
 package co.paan.service.impl;
 
 import co.paan.application.Application;
+import co.paan.configuration.ElasticsearchConfiguration;
 import co.paan.entities.Post;
 import co.paan.entities.Tag;
 import co.paan.service.PostService;
@@ -8,7 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.SpringApplicationConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
@@ -22,7 +23,7 @@ import static org.junit.Assert.assertThat;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringApplicationConfiguration(classes = Application.class)
+@SpringBootTest(classes = {Application.class, ElasticsearchConfiguration.class})
 public class PostServiceImplTest{
     @Autowired
     private PostService postService;
@@ -31,10 +32,10 @@ public class PostServiceImplTest{
 
     @Before
     public void before() {
-        elasticsearchTemplate.deleteIndex(Post.class);
+//        elasticsearchTemplate.deleteIndex(Post.class);
         elasticsearchTemplate.createIndex(Post.class);
         elasticsearchTemplate.putMapping(Post.class);
-        elasticsearchTemplate.refresh(Post.class, true);
+        elasticsearchTemplate.refresh(Post.class);
     }
 
     //@Test
